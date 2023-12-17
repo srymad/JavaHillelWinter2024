@@ -1,4 +1,4 @@
-package homeworks.hw7.task1;
+package homeworks.hw7.task1to7;
 
 public class Main {
     public static void main(String[] args) {
