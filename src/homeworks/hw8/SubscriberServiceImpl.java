@@ -8,11 +8,11 @@ public class SubscriberServiceImpl implements SubscriberService{
     }
     @Override
     public void subscribersCityCallDurationExceeded(int callTraffic) {
-
         System.out.println("Subscribers with exceeded city call traffic:");
         for (Subscriber element: clients) {
             if(element.getCityCallDuration() > callTraffic){
                 System.out.println(element);
+                System.out.println("-".repeat(40));
             }
 
         }
