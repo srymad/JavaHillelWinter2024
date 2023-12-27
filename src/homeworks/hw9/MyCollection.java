@@ -59,6 +59,7 @@ public class MyCollection {
             j++;
         }
 
+        size--;
         strings = tempString;
 
         return true;
@@ -86,6 +87,7 @@ public class MyCollection {
             j++;
         }
 
+        size--;
         strings = tempString;
 
         return true;

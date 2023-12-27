@@ -22,8 +22,14 @@ public class Main {
         System.out.println(names.get(0));
         System.out.println(names.get(15));
 
+        names.add("Max");
+        names.add("Teo");
+
         System.out.println(names);
 
+        names.add(0, "Noel");
+
+        System.out.println(names);
 
 
 
