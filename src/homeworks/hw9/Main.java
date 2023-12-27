@@ -6,11 +6,12 @@ public class Main {
 
         names.add("Joe");
         names.add(1, "Moe");
+        names.add(1, "Nick");
 
         System.out.println(names.get(1));
-        System.out.println(names.get(3));
+        System.out.println(names.get(2));
 
-        names.add(2, "John");
+        names.add(7, "John");
         names.add("Finn");
         names.add("Carol");
         names.add("Jack");

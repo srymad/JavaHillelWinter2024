@@ -11,22 +11,34 @@ public class MyCollection {
         strings = new String[startSize];
         size = 0;
     }
-    public boolean add(int index, String value) {
-        if(strings.length == size || strings.length - 1 == size) enhanceSize();
 
-        if(strings[index] != null){
-            System.out.printf("Index %d is not empty\n", index);
+    public boolean add(int index, String value) {
+        if(strings.length == size) enhanceSize();
+
+        if(index > strings.length-1) {
+            System.out.printf("Max index in the array is %d\n", size-1);
             return false;
         }
 
-        strings[index] = value;
+        String[] tempString = new String[strings.length];
+
+        for (int i = 0, j = 0; i < strings.length; i++) {
+            if(i == index){
+                tempString[i] = value;
+                continue;
+            }
+            tempString[i] = strings[j];
+            j++;
+        }
+
+        strings = tempString;
         size++;
 
         return strings[index].equals(value);
     }
 
     public boolean add(String value) {
-        if(strings.length == size || strings.length - 1 == size) enhanceSize();
+        if(strings.length == size) enhanceSize();
 
         strings[size] = value;
         size++;
@@ -86,7 +98,7 @@ public class MyCollection {
     }
 
     private void enhanceSize(){
-        int newSize = strings.length + 5;
+        int newSize = strings.length + 1;
         strings =  Arrays.copyOf(strings, newSize);
     }
 
