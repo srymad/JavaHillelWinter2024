@@ -26,3 +26,4 @@ replay_pid*
 # Additional ignoring files
 .idea
 .git
+/hw15Mvn/target/
