@@ -19,7 +19,7 @@ class StreamAPITest {
     @Test
     void fromLowerToUpperCase() {
         List<String> list = Arrays.asList("one", "two", "three", "four", "five");
-        List<StreamAPI.Pair> pairList = streamAPI.fromLowerToUpperCase(list);
+        List<Pair> pairList = streamAPI.fromLowerToUpperCase(list);
 
         for (int i = 0; i < list.size(); i++) {
             assertTrue(
