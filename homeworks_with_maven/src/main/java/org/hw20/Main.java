@@ -5,11 +5,11 @@ import java.io.IOException;
 
 public class Main {
 
-    public static final String absolutePath = "C:/Users/zasd4/Documents/demo/JavaHillelWinter2024/homeworks with maven/src/main/java/org/hw20";
+    public static final String absolutePath = "C:/Users/zasd4/Documents/demo/JavaHillelWinter2024/homeworks_with_maven/src/main/java/org/hw20";
     public static void main(String[] args) throws IOException {
 
         //csv file
-        FileLoggerConfiguration config = new FileLoggerConfiguration(absolutePath + "/log_csv.csv",
+        FileLoggerConfiguration config = new FileLoggerConfiguration(absolutePath + "/log_csv.yaml",
                 LoggingLevel.DEBUG, 32L, "text/plain");
         FileLogger fileLogger = new FileLogger(config);
 
@@ -26,10 +26,9 @@ public class Main {
 
         //FileLoggerConfigurationLoader
         System.out.println(FileLoggerConfigurationLoader.load
-                (new File(absolutePath + "/log_csv.csv")).toString());
+                (new File(absolutePath + "/log_csv.yaml")).toString());
         System.out.println(FileLoggerConfigurationLoader.load
                 (new File(absolutePath + "/log_txt.txt")).toString());
-
 
 
 
