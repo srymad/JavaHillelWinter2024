@@ -1,4 +1,4 @@
-package org.hw21.Entity;
+package org.hw21.entity;
 
 import lombok.*;
 
