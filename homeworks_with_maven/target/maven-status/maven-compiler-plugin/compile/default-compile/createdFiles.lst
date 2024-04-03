@@ -1,7 +1,11 @@
 org\hw21\ParserManager.class
 org\hw21\file_reader\ReadFromFile.class
 org\hw19\Player.class
+org\hw25\coffee\order\Order.class
+org\hw24\rest\OrderService.class
 org\hw16\CoffeeOrderBoard.class
+org\hw24\entity\Order.class
+org\hw25\coffee\order\CoffeeOrderBoard.class
 org\hw21\parser\YamlToJsonParser.class
 org\hw20\FileLoggerConfigurationLoader.class
 org\hw20\FileLogger.class
@@ -14,8 +18,11 @@ org\hw21\Main.class
 org\hw19\Main.class
 org\hw17\StreamAPI.class
 org\hw18\Product.class
+org\hw25\coffee\Main.class
 org\hw16\Order.class
+org\hw24\repository\OrderRepository.class
 org\hw20\FileLoggerConfiguration.class
 org\hw21\parser\JsonToYamlParser.class
 org\hw20\Main.class
 org\hw17\Pair.class
+org\hw24\entity\Product.class

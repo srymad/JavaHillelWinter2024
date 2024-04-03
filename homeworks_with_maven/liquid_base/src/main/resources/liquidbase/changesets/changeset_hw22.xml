@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog logicalFilePath="db.changelog-1.0.xml"
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet author="oZinchenko" id="createHomework">
+        <createTable tableName="homework">
+            <column name="id" type="int" autoIncrement="true">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="name" type="VARCHAR(50)"/>
+            <column name="description" type="VARCHAR(150)"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="oZinchenko" id="createLesson">
+        <createTable tableName="lesson">
+            <column name="id" type="int" autoIncrement="true">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="name" type="VARCHAR(50)"/>
+            <column name="updatedAt" type="TIMESTAMP"/>
+            <column name="homework_id" type="int">
+                <constraints foreignKeyName="homework_id" references="homework(id)"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="oZinchenko" id="createSchedule">
+        <createTable tableName="schedule">
+            <column name="id" type="int" autoIncrement="true">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="name" type="VARCHAR(50)"/>
+            <column name="updatedAt" type="TIMESTAMP"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="oZinchenko" id="createLessonXSchedule">
+        <createTable tableName="lesson_x_schedule">
+            <column name="lesson_id" type="int" >
+                <constraints primaryKey="true" foreignKeyName="lesson_id"
+                             references="lesson(id)" unique="true"/>
+            </column>
+            <column name="schedule_id" type="int" >
+                <constraints primaryKey="true" foreignKeyName="schedule_id"
+                             references="schedule(id)" unique="true"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+
+</databaseChangeLog>
