@@ -10,6 +10,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>cache</module>
+        <module>webservlet</module>
     </modules>
 
     <properties>
