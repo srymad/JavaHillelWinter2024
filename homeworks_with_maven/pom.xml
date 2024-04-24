@@ -12,6 +12,7 @@
         <module>cache</module>
         <module>webservlet</module>
         <module>hw30</module>
+        <module>hw31</module>
     </modules>
 
     <properties>
